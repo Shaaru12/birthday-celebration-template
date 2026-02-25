@@ -13,19 +13,23 @@ function MessageCard({ isActive }) {
   const curtainHintRef = useRef(null);
   const messageContentRef = useRef(null);
 
-  const message = `[Recipient Name],
+  const message = `[Aisumaaa],
 
-Your personalized birthday message goes here.
+I still remember 2022 like it was yesterday the first time I saw you near CCD. If someone had told me 
+that replying to one random text would bring the most important person of my life, I would’ve never 
+believed it. I still remember, we were coming back from Music Café, when you slept on my shoulder while 
+I was riding my scooty, I didn’t realize then that the girl resting so peacefully would become my entire world.
+You’ve been there for me through every up and down, every win and every breakdown. We fight, we fix, and we stay
+and that’s what makes us real. I truly don’t think I could ever love anyone the way I love you. You are the sweetest
+soul I’ve ever known. Your pretty eyes, those cute plumpy cheeks, your little piggy nose  everything about you makes
+my heart melt. I love the way you dress, the way you carry yourself, and most of all, your pure heart. A heart so rare 
+and so beautiful that anyone would be lucky to even witness it.You’ve changed me in ways you don’t even realize. I’ve 
+learned so much from you. You’re not just a chapter in my life you are the most beautiful chapter, and I want you in 
+every page that follows until my story comes to an end. You are and always will be the brightest star in my sky.
 
-You can write multiple paragraphs to express your feelings,
-share memories, and make this special day even more memorable.
+Wishing you the happiest birthday Aisumaa. I love you more than words could ever explain. 💫💓💓💓💓💓💓💓💓
 
-This template supports multiple lines and formatting,
-so feel free to customize it completely to fit your style.
-
-Happy Birthday! 🎉
-
-— [Your Name]`;
+— [SARANG]`;
 
   // Handle page transitions
   useEffect(() => {
