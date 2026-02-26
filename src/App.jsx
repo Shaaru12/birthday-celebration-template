@@ -172,7 +172,7 @@ const senderName = "Sarang";
         <Gallery isActive={currentPage === 4} />
         <section className="final">
           <h2 className="final-message">💖 Forever Yours — {senderName} 💖</h2>
-          <p className="final-subtitle">Your personalized closing message ✨</p>
+          <p className="final-subtitle">Love you sooo muchh....💓💓💓💓will be there with u tomorrow... ✨</p>
         </section>
       </div>
 
