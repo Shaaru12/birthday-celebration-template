@@ -12,25 +12,23 @@ function MessageCard({ isActive }) {
   const curtainRightRef = useRef(null);
   const curtainHintRef = useRef(null);
   const messageContentRef = useRef(null);
+  const voiceRef = useRef(null);
+const [isPlaying, setIsPlaying] = useState(false);
 
   const recipientName = "Aisuma";
   const senderName = "Sarang";
 
   const message = `[Aisumaaa],
 
-I still remember 2022 like it was yesterday the first time I saw you near CCD. If someone had told me 
-that replying to one random text would bring the most important person of my life, I would’ve never 
-believed it. I still remember, we were coming back from Music Café, when you slept on my shoulder while 
-I was riding my scooty, I didn’t realize then that the girl resting so peacefully would become my entire world.
-You’ve been there for me through every up and down, every win and every breakdown. We fight, we fix, and we stay
-and that’s what makes us real. I truly don’t think I could ever love anyone the way I love you. You are the sweetest
-soul I’ve ever known. Your pretty eyes, those cute plumpy cheeks, your little piggy nose  everything about you makes
-my heart melt. I love the way you dress, the way you carry yourself, and most of all, your pure heart. A heart so rare 
-and so beautiful that anyone would be lucky to even witness it.You’ve changed me in ways you don’t even realize. I’ve 
-learned so much from you. You’re not just a chapter in my life you are the most beautiful chapter, and I want you in 
-every page that follows until my story comes to an end. You are and always will be the brightest star in my sky.
+Happy Birthday, my Aisumaa ❤️
 
-Wishing you the happiest birthday Aisumaa. I love you more than words could ever explain. 💫💓💓💓💓💓💓💓💓
+I still remember 2022 like it was yesterday the first time I saw you near CCD. If someone had told me that replying to one random text would bring the most important person of my life, I would’ve never believed it. I still remember, we were coming back from Music Café, when you slept on my shoulder while I was riding my scooty, I didn’t realize then that the girl resting so peacefully would become my entire world.
+
+You’ve been there for me through every up and down, every win and every breakdown. We fight, we fix, and we stay and that’s what makes us real. I truly don’t think I could ever love anyone the way I love you. You are the sweetest soul I’ve ever known. Your pretty eyes, those cute plumpy cheeks, your little piggy nose  everything about you makes my heart melt. I love the way you dress, the way you carry yourself, and most of all, your pure heart. A heart so rare and so beautiful that anyone would be lucky to even witness it.
+
+You’ve changed me in ways you don’t even realize. I’ve learned so much from you. You’re not just a chapter in my life you are the most beautiful chapter, and I want you in every page that follows until my story comes to an end. You are and always will be the brightest star in my sky.
+
+Wishing you the happiest birthday, my Aisumaa. I love you more than words could ever explain. 💫❤️
 
 — [SARANG]`;
 
@@ -174,7 +172,17 @@ Wishing you the happiest birthday Aisumaa. I love you more than words could ever
       });
     }
   };
+const handleVoiceToggle = () => {
+  if (!voiceRef.current) return;
 
+  if (isPlaying) {
+    voiceRef.current.pause();
+  } else {
+    voiceRef.current.play();
+  }
+
+  setIsPlaying(!isPlaying);
+};
   return (
     <section className="message">
       <h2>💌 A Message From My Heart</h2>
@@ -215,6 +223,17 @@ Wishing you the happiest birthday Aisumaa. I love you more than words could ever
           aria-label="Birthday message"
         >
           <p className="typed-text">{message}</p>
+          <div className="voice-note">
+  <button className="voice-btn" onClick={handleVoiceToggle}>
+    {isPlaying ? "⏸ Pause My Voice" : "🎙️ Play My Voice"}
+  </button>
+
+  <audio
+    ref={voiceRef}
+    src="/voice.mp3"
+    onEnded={() => setIsPlaying(false)}
+  />
+</div>
         </div>
       </div>
 
