@@ -223,7 +223,11 @@ const handleVoiceToggle = () => {
           aria-label="Birthday message"
         >
           <p className="typed-text">{message}</p>
-          <div className="voice-note">
+         <div className="voice-note">
+  <p className="voice-hint">
+    🔊 Pause the background music before playing this 💌
+  </p>
+
   <button className="voice-btn" onClick={handleVoiceToggle}>
     {isPlaying ? "⏸ Pause My Voice" : "🎙️ Play My Voice"}
   </button>
