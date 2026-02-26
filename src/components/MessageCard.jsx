@@ -18,9 +18,7 @@ const [isPlaying, setIsPlaying] = useState(false);
   const recipientName = "Aisuma";
   const senderName = "Sarang";
 
-  const message = `[Aisumaaa],
-
-Happy Birthday, my Aisumaa ❤️
+  const message = `Aisumaaa,
 
 I still remember 2022 like it was yesterday the first time I saw you near CCD. If someone had told me that replying to one random text would bring the most important person of my life, I would’ve never believed it. I still remember, we were coming back from Music Café, when you slept on my shoulder while I was riding my scooty, I didn’t realize then that the girl resting so peacefully would become my entire world.
 
