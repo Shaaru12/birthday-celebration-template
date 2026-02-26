@@ -13,6 +13,9 @@ function MessageCard({ isActive }) {
   const curtainHintRef = useRef(null);
   const messageContentRef = useRef(null);
 
+  const recipientName = "Aisuma";
+  const senderName = "Sarang";
+
   const message = `[Aisumaaa],
 
 I still remember 2022 like it was yesterday the first time I saw you near CCD. If someone had told me 
