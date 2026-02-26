@@ -518,3 +518,31 @@
     transform: translate(-50%, -50%) scale(0.95);
   }
 }
+/* ===== Voice Note Styling ===== */
+
+.voice-note {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.voice-hint {
+  font-size: 14px;
+  color: #ffb6d5;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.voice-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ff4da6, #ff85c1);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.voice-btn:hover {
+  transform: scale(1.05);
+}
