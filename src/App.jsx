@@ -13,6 +13,8 @@ import MusicPlayer from "./components/MusicPlayer";
 gsap.registerPlugin(ScrollToPlugin);
 
 function App() {
+  const recipientName = "Aisuma";
+const senderName = "Sarang";
   const [currentPage, setCurrentPage] = useState(1); // Start at 1 for Countdown page
 
   // ⚠️ FOR TESTING: Comment out lines 18-21 to reset on every reload
@@ -94,18 +96,17 @@ function App() {
       >
         <section className="hero">
           <h1 id="heroTitle">
-            {birthdayReached ? (
-              <>
-                Happy Birthday <span className="highlight">[Name]</span> 🎂
-              </>
-            ) : (
-              <>
-                Counting down to <span className="highlight">[Name]'s</span>{" "}
-                special day 🎂
-              </>
-            )}
-          </h1>
-          <p>Your personalized message goes here 💗</p>
+  {birthdayReached ? (
+    <>
+      Happy Birthday <span className="highlight">{recipientName}</span> 🎂
+    </>
+  ) : (
+    <>
+      Counting down to{" "}
+      <span className="highlight">{recipientName}'s</span> special day 🎂
+    </>
+  )}
+</h1>
         </section>
 
         <Countdown
@@ -170,7 +171,7 @@ function App() {
         </button>
         <Gallery isActive={currentPage === 4} />
         <section className="final">
-          <h2 className="final-message">💖 Forever Yours — [Your Name] 💖</h2>
+          <h2 className="final-message">💖 Forever Yours — {senderName} 💖</h2>
           <p className="final-subtitle">Your personalized closing message ✨</p>
         </section>
       </div>
